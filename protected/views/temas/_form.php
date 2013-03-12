@@ -2,9 +2,18 @@
 	'id'=>'temas-form',
 	'enableAjaxValidation'=>false,
 )); ?>
-
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
-
+<?php 
+Yii::app()->user->setFlash('warning', ' Los elementos marcados con <strong>*</strong> son obligatorios!.');
+$this->widget('bootstrap.widgets.TbAlert', array(
+    'block'=>true, // display a larger alert block?
+    'fade'=>true, // use transitions?
+    'closeText'=>'×', // close link text - if set to false, no close link is displayed
+    'alerts'=>array( // configurations per alert type
+	    'warning'=>array('block'=>true, 'fade'=>true, 'closeText'=>'×'), // success, info, warning, error or danger
+    ),
+));
+?>
+	
 	<?php echo $form->errorSummary($model); ?>
 
 	<?php echo $form->textFieldRow($model,'nombre',array('class'=>'span5','maxlength'=>100)); ?>

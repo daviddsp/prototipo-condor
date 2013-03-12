@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Temases'=>array('index'),
+	'Temas'=>array('index'),
 	$model->id_tema,
 );
 
 $this->menu=array(
-	array('label'=>'List Temas','url'=>array('index')),
-	array('label'=>'Create Temas','url'=>array('create')),
-	array('label'=>'Update Temas','url'=>array('update','id'=>$model->id_tema)),
-	array('label'=>'Delete Temas','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->id_tema),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Temas','url'=>array('admin')),
+	array('label'=>'Listar Temas','url'=>array('index')),
+	array('label'=>'Crear Temas','url'=>array('create')),
+	array('label'=>'Actualizar Temas','url'=>array('update','id'=>$model->id_tema)),
+	array('label'=>'Borrar Temas','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->id_tema),'confirm'=>'Realmente quiere borrar esto?')),
+	array('label'=>'Gestión de Temas','url'=>array('admin')),
 );
 ?>
 
-<h1>View Temas #<?php echo $model->id_tema; ?></h1>
+<h1>Vista de Temas #<?php echo $model->id_tema; ?></h1>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

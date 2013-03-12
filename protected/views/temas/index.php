@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Temases',
+	'Temas',
 );
 
 $this->menu=array(
-	array('label'=>'Create Temas','url'=>array('create')),
-	array('label'=>'Manage Temas','url'=>array('admin')),
+	array('label'=>'Crear Temas','url'=>array('create')),
+	array('label'=>'Gestión de Temas','url'=>array('admin')),
 );
 ?>
 
-<h1>Temases</h1>
+<h1>Temas</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

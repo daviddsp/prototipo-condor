@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Temases'=>array('index'),
-	'Create',
+	'Temas'=>array('index'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List Temas','url'=>array('index')),
-	array('label'=>'Manage Temas','url'=>array('admin')),
+	array('label'=>'Lista de Temas','url'=>array('index')),
+	array('label'=>'Gestión Temas','url'=>array('admin')),
 );
 ?>
 
-<h1>Create Temas</h1>
+<h1>Crear Temas</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
